@@ -9,26 +9,36 @@
   <body>
     <header>
       <div class="logoholder">
-        <div class="logo"></div>
+        <img src="/image/png.png" alt="" class="logo" />
       </div>
-      <div class="navigation">
-        <a href="../landing/home.html"> <nav>Home</nav></a>
-        <a href="../product/product.html"> <nav>Product</nav></a>
-        <a href="../category/category.html"> <nav>Category</nav></a>
-      </div>
+      <nav class="nav" id="nav-menu">
+        <ul>
+          <li><a href="/landing/home.html">Home</a></li>
+          <li><a href="/product/product.html">Product</a></li>
+          <li><a href="/category/category.html">Category</a></li>
+        </ul>
+      </nav>
+
       <div class="login">
-        <a href="../cart1.html">  <div class="cart">
-          <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
-        </div></a>
-        <div class="signin">
-         <a href="../index.html"> <button>Sign in</button></a>
+        <a href="../cart1.html">
+          <div class="cart-header">
+            <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
+            <span id="cart-count" class="cart-count">0</span>
+          </div>
+        </a>
+        <div class="signin" id="signin">
+          <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
+          <a href="/index.html" id="logout-btn" style="display: none">
+            <button>Sign in</button></a
+          >
+        </div>
+        <div class="hamburger cart-header" id="hamburg">
+          <img src="../image/hamburger.svg" alt="" />
         </div>
       </div>
     </header>
-    <br />
-    <br />
 
-    <div class="xplore">
+    <div class="xplore heropage1">
       <div class="xploreholder">
         <div class="textside">
           <h3>Explore More Product</h3>
@@ -38,8 +48,7 @@
         </div>
       </div>
     </div>
-    <br />
-    <br />
+
     <div class="catenav">
       <h4>Shoe</h4>
       <a href="../suite/suite.html"><h4>Suite</h4></a>
@@ -47,21 +56,27 @@
     </div>
     <br />
 
-    <div class="productside">
+    <div class="productside heropage1">
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe4.png"
-            alt=""
-          />
+          <div class="cardimage">
+            <img
+              src="../image/shoe4.png"
+              alt=""
+              onclick="viewProductDetails('Cow skin Shoe', 50000, '../image/shoe4.png' )"
+            />
+          </div>
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>Cow skin Shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>50,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Cow skin Shoe', 50000, '/image/shoe4.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -71,15 +86,19 @@
           <img
             src="../image/shoe5.png"
             alt=""
+            onclick="viewProductDetails('London Shoe', 40000, '../image/shoe5.png' )"
           />
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>London Shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>40,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('London Shoe', 40000, '/image/shoe5.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -89,15 +108,19 @@
           <img
             src="../image/shoe7.png"
             alt=""
+            onclick="viewProductDetails('Brown Leather Shoe', 90000, '../image/shoe7.png' )"
           />
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>Brown Leather Shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>90,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Brown Leather Shoe', 90000, '/image/shoe7.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -107,15 +130,19 @@
           <img
             src="../image/shoe8.png"
             alt=""
+            onclick="viewProductDetails('Grey Shoe', 90000, '../image/shoe8.png' )"
           />
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>Grey Shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>50,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Grey Shoe', 50000, '/image/shoe8.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -125,15 +152,19 @@
           <img
             src="../image/shoe10.png"
             alt=""
+            onclick="viewProductDetails('VIntage shoe', 80000, '../image/shoe10.png' )"
           />
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>Vintage shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>40,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Vintage shoe', 40000, '/image/shoe10.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -143,15 +174,19 @@
           <img
             src="../image/shoe11.png"
             alt=""
+            onclick="viewProductDetails('Black Leather Shoe', 70000, '../image/shoe11.png' )"
           />
         </div>
         <div class="cardtext1">
-          <p>Tie</p>
+          <p>Black Leather Shoe</p>
           <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <h4>70,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Black Leather Shoe', 70000, '/image/shoe11.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -161,7 +196,26 @@
           <img
             src="../image/shoe1.png"
             alt=""
+            onclick="viewProductDetails('Plain Black Shoe', 60000, '../image/shoe1.png' )"
           />
+        </div>
+        <div class="cardtext1">
+          <p>Plain Black Shoe</p>
+          <div class="money_cart">
+            <h4>60,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Plain Black Shoe', 60000, '/image/shoe1.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/shoe 12.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -176,10 +230,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe 12.png"
-            alt=""
-          />
+          <img src="../image/shoe3.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -194,10 +245,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe3.png"
-            alt=""
-          />
+          <img src="../image/shoe2.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -212,10 +260,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe2.png"
-            alt=""
-          />
+          <img src="../image/shoe14.jpg" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -230,10 +275,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe14.jpg"
-            alt=""
-          />
+          <img src="../image/shoe8.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -248,10 +290,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe8.png"
-            alt=""
-          />
+          <img src="../image/shoe13.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -266,10 +305,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe13.png"
-            alt=""
-          />
+          <img src="../image/shoe6.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -284,10 +320,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe6.png"
-            alt=""
-          />
+          <img src="../image/shoe7.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -302,28 +335,7 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe7.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Tie</p>
-          <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/shoe10.png"
-            alt=""
-          />
+          <img src="../image/shoe10.png" alt="" />
         </div>
         <div class="cardtext1">
           <p>Tie</p>
@@ -376,7 +388,7 @@
         </div>
         <div class="contact">
           <h4>CONTACT</h4>
-<br>
+          <br />
           <div class="call1">
             <div class="theimages">
               <img src="../image/location-indicator-svgrepo-com.svg" alt="" />
@@ -391,11 +403,62 @@
             <p>0803737383u477</p>
           </div>
           <div class="call">
-           <div class="theimages"> <img src="" alt="" /></div>
+            <img src="../image/icon-email.svg" alt="" />
             <p>johndeo@gmail.com</p>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      // add to cart function that saves to localStorage
+      const addToCart = (productName, price, imageUrl) => {
+        // Fetch cart from localStorage or initialize as an empty array
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProduct = cart.find((item) => item.name === productName);
+
+        if (existingProduct) {
+          // Increase quantity if product exists
+          existingProduct.quantity += 1;
+        } else {
+          // Add new product to the cart if it doesn't exist
+          const newProduct = {
+            name: productName,
+            price: price,
+            image: imageUrl,
+            quantity: 1,
+          };
+          cart.push(newProduct);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${productName} has been added to your cart.`);
+
+        // Update cart count in the cart-icon
+        updateCartCount();
+      };
+
+      const viewProductDetails = (name, price, imageUrl) => {
+        const productDetails = {
+          name: name,
+          price: price,
+          imageUrl: imageUrl,
+        };
+        localStorage.setItem("selectedProduct", JSON.stringify(productDetails));
+        // Redirect to product details page
+        window.location.href = "/detail page/detail.html";
+      };
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click", () => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

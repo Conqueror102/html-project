@@ -7,27 +7,39 @@
     <link rel="stylesheet" href="./suite.css">
 </head>
 <body>
-    <header>
-        <div class="logoholder">
-          <div class="logo"></div>
+  <header>
+    <div class="logoholder">
+      <img src="/image/png.png" alt="" class="logo" />
+    </div>
+    <nav  class="nav" id="nav-menu">
+      <ul>
+        <li><a href="/landing/home.html">Home</a></li>
+        <li><a href="/product/product.html">Product</a></li>
+        <li><a href="/category/category.html">Category</a></li>
+      </ul>
+    </nav>
+
+    <div class="login">
+      <a href="../cart1.html">
+        <div class="cart-header">
+          <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
+          <span id="cart-count" class="cart-count">0</span>
         </div>
-        <div class="navigation">
-          <a href="../landing/home.html">  <nav>Home</nav></a>
-            <a href="../product/product.html"> <nav>Product</nav></a>
-           <a href="../category/category.html"> <nav>Category</nav></a>
-        </div>
-        <div class="login">
-          <a href="../cart1.html">  <div class="cart">
-            <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
-          </div></a>
-          <div class="signin">
-         <a href="../index.html">   <button>Sign in</button></a>
-          </div>
-        </div>
-      </header>
-      <br />
-      <br />
-      <div class="xplore">
+      </a>
+      <div class="signin" id="signin">
+        <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
+        <a href="/index.html" id="logout-btn" style="display: none">
+          <button>Sign in</button></a
+        >
+      </div>
+      <div class="hamburger cart-header" id="hamburg">
+        <img src="../image/hamburger.svg" alt="" />
+      </div>
+    </div>
+  </header>
+
+      
+      <div class="xplore heropage1" > 
         <div class="xploreholder">
           <div class="textside">
             <h3>Explore More Product</h3>
@@ -37,8 +49,7 @@
           </div>
         </div>
       </div>
-      <br />
-      <br />
+      
 
       <div class="catenav">
        <a href="../shoe/shoe.html"> <h4>Shoe</h4></a>
@@ -46,9 +57,9 @@
         <a href="../watch/watch.html"> <h4>Watch</h4></a>
       </div>
 
-      <br>
+   
   
-      <div class="productside">
+      <div class="productside heropage1">
         <div class="card1">
           <div class="cardimage">
             <img
@@ -247,77 +258,7 @@
           </div>
         </div>
   
-        <!-- <div class="card1">
-          <div class="cardimage">
-            <img
-              src="../image/Men's Silk Neck Tie Handkerchief Cufflinks and Clip Set.jpg"
-              alt=""
-            />
-          </div>
-          <div class="cardtext1">
-            <p>Tie</p>
-            <div class="money_cart">
-              <h4>800,000</h4>
-              <div class="buy">
-                <p>Add to Cart</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="card1">
-          <div class="cardimage">
-            <img
-              src="../image/Men's Silk Neck Tie Handkerchief Cufflinks and Clip Set.jpg"
-              alt=""
-            />
-          </div>
-          <div class="cardtext1">
-            <p>Tie</p>
-            <div class="money_cart">
-              <h4>800,000</h4>
-              <div class="buy">
-                <p>Add to Cart</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="card1">
-          <div class="cardimage">
-            <img
-              src="../image/Men's Silk Neck Tie Handkerchief Cufflinks and Clip Set.jpg"
-              alt=""
-            />
-          </div>
-          <div class="cardtext1">
-            <p>Tie</p>
-            <div class="money_cart">
-              <h4>800,000</h4>
-              <div class="buy">
-                <p>Add to Cart</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="card1">
-          <div class="cardimage">
-            <img
-              src="../image/Men's Silk Neck Tie Handkerchief Cufflinks and Clip Set.jpg"
-              alt=""
-            />
-          </div>
-          <div class="cardtext1">
-            <p>Tie</p>
-            <div class="money_cart">
-              <h4>800,000</h4>
-              <div class="buy">
-                <p>Add to Cart</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        
   
         <div class="card1">
           <div class="cardimage">
@@ -393,11 +334,64 @@
             <p>0803737383u477</p>
           </div>
           <div class="call">
-           <div class="theimages"> <img src="" alt="" /></div>
+            <img src="../image/icon-email.svg" alt="" />
             <p>johndeo@gmail.com</p>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      // add to cart function that saves to localStorage
+      const addToCart = (productName, price, imageUrl) => {
+  // Fetch cart from localStorage or initialize as an empty array
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingProduct = cart.find(item => item.name === productName);
+
+  if (existingProduct) {
+    // Increase quantity if product exists
+    existingProduct.quantity += 1;
+  } else {
+    // Add new product to the cart if it doesn't exist
+    const newProduct = {
+      name: productName,
+      price: price,
+      image: imageUrl,
+      quantity: 1
+    };
+    cart.push(newProduct);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${productName} has been added to your cart.`);
+
+  // Update cart count in the cart-icon
+  updateCartCount();
+};
+
+const viewProductDetails = (name, price, imageUrl) => {
+  const productDetails = {
+    name: name,
+    price: price,
+    imageUrl: imageUrl
+  };
+  localStorage.setItem('selectedProduct', JSON.stringify(productDetails));
+  // Redirect to product details page
+  window.location.href = '/detail page/detail.html';
+}
+
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click", () => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      });
+    </script>
 </body>
 </html>

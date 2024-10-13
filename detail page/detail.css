@@ -19,6 +19,10 @@
     justify-content: space-between;
     border-bottom: 1px black solid;
     padding: 10px 70px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #f7f7f7;
   }
   .logo {
     width: 60px;
@@ -95,7 +99,7 @@
 
 .details {
     max-width: 1000px;
-    background-color: white;
+    background-color: rgb(248, 248, 248);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -126,13 +130,12 @@
 .productimage img {
     width: 90%;
     height: 90%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .textside {
     width: 55%;
     height: 500px;
-    /* background-color: blue; */
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     display: flex;
@@ -145,7 +148,6 @@
 .productname {
     width: 80%;
     height: 70px;
-    /* background-color: blueviolet; */
     display: flex;
     align-items:  center;
     font-size: 2rem;
@@ -210,8 +212,8 @@
 }
 
 .rate {
-    width: 40%;
-    height: 18px;
+    width: 100px;
+    height: 30px;
     border-radius: 50px;
     border: 2px solid black;
     display: flex;
@@ -268,6 +270,27 @@
     }
     nav{
         display: none;
+        top: 70px;
+        left: 0;
+        height: 100vh;
+        width: 80%;
+        background-color: rgb(196, 196, 196);
+ 
+        position: fixed;
+    }
+
+    nav ul{
+      flex-direction: column;
+    }
+
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+
+    nav.active{
+      display: block;
+      
     }
     .signin{
         display: none;
@@ -281,5 +304,40 @@
         padding: 10px;
         width: 100%;
     }
+
+    .details {
+      flex-direction: column;
+    }
+
+    .imageside{
+      width: 100%;
+    }
+
+    .productimage{
+   width: 400px;
+    }
+
+    .textside{
+      width: 100%;
+    }
+
+    .productname h3 {
+      font-size: 1.8rem;
+    }
+
+    .rate {
+      width: 90px;
+      height: 30px;
+  
+    }
+
+    .rate h4{
+      font-size: 1rem;
+     
+    }
+
+  .quantity {
+    width: 50%;
+  }
 
   }

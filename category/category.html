@@ -11,7 +11,7 @@
       <div class="logoholder">
         <img src="/image/png.png" alt="" class="logo" />
       </div>
-      <nav>
+      <nav  class="nav" id="nav-menu">
         <ul>
           <li><a href="/landing/home.html">Home</a></li>
           <li><a href="/product/product.html">Product</a></li>
@@ -32,7 +32,7 @@
             <button>Sign in</button></a
           >
         </div>
-        <div class="hamburger cart-header">
+        <div class="hamburger cart-header" id="hamburg">
           <img src="../image/hamburger.svg" alt="" />
         </div>
       </div>
@@ -49,32 +49,30 @@
         </div>
       </div>
     </div>
-    <br />
-    <br />
-    <br>
-    <br>
-    <br>
+    
     <div class="catenav heropage1">
       <a href="../shoe/shoe.html"><h4>Shoe</h4></a>
       <a href="../suite/suite.html"><h4>Suite</h4></a>
       <a href="../watch/watch.html"> <h4>Watch</h4></a>
     </div>
-    <br />
+   
 
     <div class="productside heropage1">
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe1.png"
-            alt=""
-          />
+          <img src="../image/shoe11.png" alt=""  onclick="viewProductDetails('Black Leather Shoe', 70000, '../image/shoe11.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Shoe</p>
+          <p>Black Leather Shoe</p>
           <div class="money_cart">
             <h4>70,000</h4>
             <div class="buy">
-              <p>Add to Cart</p>
+              <button
+                class="button"
+                onclick="addToCart('Black Leather Shoe', 70000, '/image/shoe11.png')"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -82,17 +80,19 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/suie8.png"
-            alt=""
-          />
+          <img src="../image/suie8.png" alt=""  onclick="viewProductDetails('UK suite', 900, '../image/suie8.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Suite</p>
+          <p>UK suite</p>
           <div class="money_cart">
-            <h4>90,000</h4>
+            <h4>9000</h4>
             <div class="buy">
-              <p>Add to Cart</p>
+              <button
+                class="button"
+                onclick="addToCart('UK suite', 90000, '/image/suie8.png')"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -100,17 +100,19 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/watch1.png"
-            alt=""
-          />
+          <img src="../image/watch1.png" alt=""  onclick="viewProductDetails('Brown Leather Watch',5000, '../image/watch1.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Watch</p>
+          <p>Brown Leather Watch</p>
           <div class="money_cart">
-            <h4>200,000</h4>
+            <h4>5000</h4>
             <div class="buy">
-              <p>Add to Cart</p>
+              <button
+                class="button"
+                onclick="addToCart('Brown Leather Watch', 5000, '/image/watch1.png')"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -118,17 +120,19 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/belt3.png"
-            alt=""
-          />
+           <img src="../image/belt3.png" alt=""  onclick="viewProductDetails('Belt Set', 1000, '../image/belt3.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Belt</p>
+          <p>Belt Set</p>
           <div class="money_cart">
-            <h4>10,000</h4>
+            <h4>10000</h4>
             <div class="buy">
-              <p>Add to Cart</p>
+              <button
+                class="button"
+                onclick="addToCart('Belt Set', 10000, '../image/belt3.png')"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -136,17 +140,19 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/shoe10.png"
-            alt=""
-          />
+           <img src="../image/shoe10.png" alt=""  onclick="viewProductDetails('Vintage Shoe', 40000, '../image/shoe10.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Shoe</p>
+          <p>Vintage Shoe</p>
           <div class="money_cart">
             <h4>40,000</h4>
             <div class="buy">
-              <p>Add to Cart</p>
+              <button
+                class="button"
+                onclick="addToCart('vintage Shoe', 40000, '/image/shoe10.png')"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>
@@ -154,198 +160,200 @@
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/watch3.png"
-            alt=""
-          />
+           <img src="../image/watch3.png" alt=""  onclick="viewProductDetails('G-shock Watch', 50000, '../image/watch3.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Watch</p>
+          <p>G-shock Watch</p>
           <div class="money_cart">
             <h4>50,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <button
+              class="button"
+              onclick="addToCart('G-shock Watch', 50000, '/image/watch3.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/belt1.png"
-            alt=""
-          />
+          <img src="../image/belt1.png" alt=""  onclick="viewProductDetails('Gucci Belt', 20000, '../image/belt1.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Belt</p>
+          <p>Gucci Belt</p>
           <div class="money_cart">
             <h4>20,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <button
+              class="button"
+              onclick="addToCart('Gucci Belt', 20000, '../image/belt1.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/watch2.png"
-            alt=""
-          />
+          <img src="../image/watch2.png" alt=""  onclick="viewProductDetails('Stainless Watch', 60000, '../image/watch2.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Watch</p>
-          <div class="money_cart">
-            <h4>90,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/suite.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Suit</p>
-          <div class="money_cart">
-            <h4>100,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/shoe2.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Shoe</p>
-          <div class="money_cart">
-            <h4>200,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/suite5.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Suite</p>
-          <div class="money_cart">
-            <h4>800,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/suite12.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Suit</p>
-          <div class="money_cart">
-            <h4>300,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/Tuledai Men High Quality Real Genuine Leather Belt Business Cowskin Famous Brand Metal Automatic Buckle Belts Waist Straps for Jeans Black-Black-105cm.jpg"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Belt</p>
-          <div class="money_cart">
-            <h4>30,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/shoe8.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Shoe</p>
-          <div class="money_cart">
-            <h4>80,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card1">
-        <div class="cardimage">
-          <img
-            src="../image/suite9.png"
-            alt=""
-          />
-        </div>
-        <div class="cardtext1">
-          <p>Suite</p>
+          <p>Stainless Watch</p>
           <div class="money_cart">
             <h4>60,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <button
+              class="button"
+              onclick="addToCart('Stainless Watch', 60000, '/image/watch2.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
 
       <div class="card1">
         <div class="cardimage">
-          <img
-            src="../image/suit3.png"
-            alt=""
-          />
+          <img src="../image/suie8.png" alt=""  onclick="viewProductDetails('Grey Suit', 90000, '../image/watch2.png' )" />
         </div>
         <div class="cardtext1">
-          <p>Suite</p>
+          <p>Grey Suit</p>
+          <div class="money_cart">
+            <h4>90,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Grey Suit', 90000, '/image/suite.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/shoe2.png" alt=""  onclick="viewProductDetails('Burrberry Shoe', 200000, '../image/watch2.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Burrberry Shoe</p>
+          <div class="money_cart">
+            <h4>200,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Burrberry Shoe', 200000, '/image/shoe2.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite5.png" alt=""  onclick="viewProductDetails('India Suite', 90000, '../image/suite5.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>India Suite</p>
+          <div class="money_cart">
+            <h4>90,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('India Suite', 90000, '/image/suite5.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite12.png" alt=""  onclick="viewProductDetails('Black Suite', 30000, '../image/suite12.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Black Suite</p>
+          <div class="money_cart">
+            <h4>30,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Black Suite', 300000, '/image/suite12.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+        
+          <img src="../image/Tuledai Men High Quality Real Genuine Leather Belt Business Cowskin Famous Brand Metal Automatic Buckle Belts Waist Straps for Jeans Black-Black-105cm.jpg" alt=""  onclick="viewProductDetails('Italian Belt', 30000, '../image/Tuledai Men High Quality Real Genuine Leather Belt Business Cowskin Famous Brand Metal Automatic Buckle Belts Waist Straps for Jeans Black-Black-105cm.jpg' )" />
+    
+        </div>
+        <div class="cardtext1">
+          <p>Italian Belt</p>
+          <div class="money_cart">
+            <h4>30,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Italian Belt', 30000, '../image/Tuledai Men High Quality Real Genuine Leather Belt Business Cowskin Famous Brand Metal Automatic Buckle Belts Waist Straps for Jeans Black-Black-105cm.jpg')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite8.png" alt=""  onclick="viewProductDetails('Turkey Shoe', 80000, '../image/suite8.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Turkey Shoe</p>
+          <div class="money_cart">
+            <h4>80,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Turkey Shoe', 80000, '/image/shoe8.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite9.png" alt=""  onclick="viewProductDetails('German Tuxedo', 60000, '../image/suite9.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>German Tuxedo</p>
+          <div class="money_cart">
+            <h4>60,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('German Tuxedo', 60000, '../image/suite9.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suit3.png" alt=""  onclick="viewProductDetails('Leather Suite', 100000, '../image/suit3.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Leather Suite</p>
           <div class="money_cart">
             <h4>100,000</h4>
-            <div class="buy">
-              <p>Add to Cart</p>
-            </div>
+            <button
+              class="button"
+              onclick="addToCart('Leather Suite', 100000, '../image/suit3.png')"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
@@ -406,11 +414,64 @@
             <p>0803737383u477</p>
           </div>
           <div class="call">
-           <div class="theimages"> <img src="" alt="" /></div>
+            <img src="../image/icon-email.svg" alt="" />
             <p>johndeo@gmail.com</p>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      // add to cart function that saves to localStorage
+      const addToCart = (productName, price, imageUrl) => {
+  // Fetch cart from localStorage or initialize as an empty array
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingProduct = cart.find(item => item.name === productName);
+
+  if (existingProduct) {
+    // Increase quantity if product exists
+    existingProduct.quantity += 1;
+  } else {
+    // Add new product to the cart if it doesn't exist
+    const newProduct = {
+      name: productName,
+      price: price,
+      image: imageUrl,
+      quantity: 1
+    };
+    cart.push(newProduct);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${productName} has been added to your cart.`);
+
+  // Update cart count in the cart-icon
+  updateCartCount();
+};
+
+const viewProductDetails = (name, price, imageUrl) => {
+  const productDetails = {
+    name: name,
+    price: price,
+    imageUrl: imageUrl
+  };
+  localStorage.setItem('selectedProduct', JSON.stringify(productDetails));
+  // Redirect to product details page
+  window.location.href = '/detail page/detail.html';
+}
+
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click", () => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>

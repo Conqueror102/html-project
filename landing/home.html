@@ -9,9 +9,9 @@
   <body>
     <header>
       <div class="logoholder">
-        <img src="/image/png.png" alt="" class="logo">
+        <img src="/image/png.png" alt="" class="logo" />
       </div>
-      <nav>
+      <nav class="nav" id="nav-menu">
         <ul>
           <li><a href="/landing/home.html">Home</a></li>
           <li><a href="/product/product.html">Product</a></li>
@@ -22,52 +22,45 @@
       <div class="login">
         <a href="../cart1.html">
           <div class="cart-header">
-            <img src="../image/cart-large-2-svgrepo-com copy.svg"  alt=""/>
+            <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
             <span id="cart-count" class="cart-count">0</span>
           </div>
         </a>
         <div class="signin" id="signin">
           <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
-          <a href="/index.html" id="logout-btn" style="display: none;"> <button>Sign in</button></a>
+          <a href="/index.html" id="logout-btn" style="display: none">
+            <button>Logout</button></a
+          >
         </div>
-        <div class="hamburger cart-header">
+        <div class=  "hamburger cart-header"  id="hamburg">
           <img src="../image/hamburger.svg" alt="" />
         </div>
       </div>
-
     </header>
     <div class="heropage">
-       
-        <div class="grouping">
-          <div class="heropage_texside">
-
-            <div class="text">
+      <div class="grouping">
+        <div class="heropage_texside">
+          <div class="text">
+            <div class="gentle">
               <div class="coll">
                 <h5>NEW COLLECTION</h5>
               </div>
-
-              <div class="gentle">
-                <h2>Gentle Men</h2>
-                <p>FASHION STORE</p>
-              </div>
-              <br />
-              <a href="../product/product.html">
-                <button class="shopnow">
-                  <p>Shop now!</p>
-                </button></a
-              >
+              <h2>Gentle Men</h2>
+              <p>FASHION STORE</p>
             </div>
+            <br />
+            <a href="../product/product.html">
+              <button class="shopnow">
+                <p>Shop now!</p>
+              </button></a
+            >
           </div>
-
-
-            <div class="heropage_imageside">
-
-            </div>
-
-
         </div>
+
+        <div class="heropage_imageside"></div>
       </div>
     </div>
+
     <div class="category heropage1">
       <div class="heading">
         <h3>Shop by Categories</h3>
@@ -116,7 +109,7 @@
         >
       </div>
     </div>
-    <div class="bestseller heropage1" >
+    <div class="bestseller heropage1">
       <div class="bestseller_heading">
         <h3>Best Sellers</h3>
         <hr />
@@ -125,12 +118,16 @@
       <div class="bestseller_card">
         <div class="card1">
           <div class="cardimage">
-            <img src="../image/belt5.jpg" alt="" onclick="viewProductDetails('Black leather belt', 540, '../image/belt5.jpg' )" />
+            <img
+              src="../image/belt5.jpg"
+              alt=""
+              onclick="viewProductDetails('Black leather belt', 540, '../image/belt5.jpg' )"
+            />
           </div>
           <div class="cardtext1">
             <p>Black leather belt</p>
             <div class="money_cart">
-              <h4> ₦540</h4>
+              <h4>₦540</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -145,12 +142,16 @@
 
         <div class="card1">
           <div class="cardimage">
-            <img src="../image/suite12.png" alt="" onclick="viewProductDetails('Grey suite', 200, '../image/suite12.png' )" />
+            <img
+              src="../image/suite12.png"
+              alt=""
+              onclick="viewProductDetails('Grey suite', 200, '../image/suite12.png' )"
+            />
           </div>
           <div class="cardtext1">
             <p>Grey suite</p>
             <div class="money_cart">
-              <h4> ₦200</h4>
+              <h4>₦200</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -165,12 +166,16 @@
 
         <div class="card1">
           <div class="cardimage">
-            <img src="../image/red.png" alt="" onclick="viewProductDetails('German Tux', 600, '../image/red.png' )" />
+            <img
+              src="../image/red.png"
+              alt=""
+              onclick="viewProductDetails('German Tux', 600, '../image/red.png' )"
+            />
           </div>
           <div class="cardtext1">
             <p>German Tux</p>
             <div class="money_cart">
-              <h4> ₦600</h4>
+              <h4>₦600</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -194,7 +199,7 @@
           <div class="cardtext1">
             <p>Brown Watch</p>
             <div class="money_cart">
-              <h4> ₦500</h4>
+              <h4>₦500</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -209,12 +214,16 @@
 
         <div class="card1">
           <div class="cardimage">
-            <img src="/image/belt6.jpg" alt="" onclick="viewProductDetails('Cros Belt', 400, '/image/belt6.jpg' )" />
+            <img
+              src="/image/belt6.jpg"
+              alt=""
+              onclick="viewProductDetails('Cros Belt', 400, '/image/belt6.jpg' )"
+            />
           </div>
           <div class="cardtext1">
             <p>Cros Belt</p>
             <div class="money_cart">
-              <h4> ₦400</h4>
+              <h4>₦400</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -229,12 +238,16 @@
 
         <div class="card1">
           <div class="cardimage">
-            <img src="../image/shoe7.png" alt="" onclick="viewProductDetails('Brown Italian Show', 800, '../image/shoe7.png' )" />
+            <img
+              src="../image/shoe7.png"
+              alt=""
+              onclick="viewProductDetails('Brown Italian Show', 800, '../image/shoe7.png' )"
+            />
           </div>
           <div class="cardtext1">
             <p>Brown Italian Shoe</p>
             <div class="money_cart">
-              <h4> ₦800</h4>
+              <h4>₦800</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -249,12 +262,16 @@
 
         <div class="card1">
           <div class="cardimage">
-            <img src="../image/shoe11.png" alt=""  onclick="viewProductDetails('Gucci Black Shoe', 600, '../image/shoe11.png' )" />
+            <img
+              src="../image/shoe11.png"
+              alt=""
+              onclick="viewProductDetails('Gucci Black Shoe', 600, '../image/shoe11.png' )"
+            />
           </div>
           <div class="cardtext1">
             <p>Gucci Black Shoe</p>
             <div class="money_cart">
-              <h4> ₦600</h4>
+              <h4>₦600</h4>
               <div class="buy">
                 <button
                   class="button"
@@ -278,7 +295,7 @@
           <div class="cardtext1">
             <p>Rolex Watch</p>
             <div class="money_cart">
-              <h4> ₦1000</h4>
+              <h4>₦1000</h4>
 
               <button
                 class="button"
@@ -299,10 +316,10 @@
             <img src="../image/whi.png" alt="" />
           </div>
           <br />
-          <p>
+          <p >
             Lorem ipsum, dolor sit amet consectetur <br />
             adipisicing elit. Perferendis id vero deleniti <br />
-            ratione aut dolores sed aspernatur ea.
+          
           </p>
 
           <div class="media">
@@ -358,42 +375,41 @@
     <script>
       // add to cart function that saves to localStorage
       const addToCart = (productName, price, imageUrl) => {
-  // Fetch cart from localStorage or initialize as an empty array
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const existingProduct = cart.find(item => item.name === productName);
+        // Fetch cart from localStorage or initialize as an empty array
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProduct = cart.find((item) => item.name === productName);
 
-  if (existingProduct) {
-    // Increase quantity if product exists
-    existingProduct.quantity += 1;
-  } else {
-    // Add new product to the cart if it doesn't exist
-    const newProduct = {
-      name: productName,
-      price: price,
-      image: imageUrl,
-      quantity: 1
-    };
-    cart.push(newProduct);
-  }
+        if (existingProduct) {
+          // Increase quantity if product exists
+          existingProduct.quantity += 1;
+        } else {
+          // Add new product to the cart if it doesn't exist
+          const newProduct = {
+            name: productName,
+            price: price,
+            image: imageUrl,
+            quantity: 1,
+          };
+          cart.push(newProduct);
+        }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert(`${productName} has been added to your cart.`);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${productName} has been added to your cart.`);
 
-  // Update cart count in the cart-icon
-  updateCartCount();
-};
+        // Update cart count in the cart-icon
+        updateCartCount();
+      };
 
-const viewProductDetails = (name, price, imageUrl) => {
-  const productDetails = {
-    name: name,
-    price: price,
-    imageUrl: imageUrl
-  };
-  localStorage.setItem('selectedProduct', JSON.stringify(productDetails));
-  // Redirect to product details page
-  window.location.href = '/detail page/detail.html';
-}
-
+      const viewProductDetails = (name, price, imageUrl) => {
+        const productDetails = {
+          name: name,
+          price: price,
+          imageUrl: imageUrl,
+        };
+        localStorage.setItem("selectedProduct", JSON.stringify(productDetails));
+        // Redirect to product details page
+        window.location.href = "/detail page/detail.html";
+      };
 
       // function to update cart icon count
       const updateCartCount = () => {
@@ -406,6 +422,9 @@ const viewProductDetails = (name, price, imageUrl) => {
       document.getElementById("hamburg")?.addEventListener("click", () => {
         document.getElementById("nav-menu")?.classList.toggle("active");
       });
+
+
+
     </script>
   </body>
 </html>

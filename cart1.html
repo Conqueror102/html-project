@@ -12,11 +12,11 @@
         <div class="logoholder">
           <img src="/image/png.png" alt="" class="logo">
         </div>
-        <nav>
+        <nav id="nav-menu">
           <ul>
             <li><a href="/landing/home.html">Home</a></li>
             <li><a href="/product/product.html">Product</a></li>
-            <li><a href="#">Category</a></li>
+            <li><a href="/category/category.html">Category</a></li>
           </ul>
         </nav>
 
@@ -31,7 +31,7 @@
             <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
             <a href="/index.html" id="logout-btn" style="display: none;"> <button>Sign in</button></a>
           </div>
-          <div class="hamburger cart-header">
+          <div class="hamburger cart-header" id="hamburg">
             <img src="../image/hamburger.svg" alt="" />
           </div>
         </div>
@@ -175,6 +175,9 @@
 
   document.addEventListener('DOMContentLoaded',  displayCartItems);
       // window.onload = displayCartItems;
+      document.getElementById("hamburg")?.addEventListener("click", () =>{
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      })
     </script>
 
   </body>
