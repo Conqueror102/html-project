@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gentle Men</title>
     <link rel="stylesheet" href="./home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -32,7 +33,7 @@
             <button>Logout</button></a
           >
         </div>
-        <div class=  "hamburger cart-header"  id="hamburg">
+        <div class="hamburger cart-header" id="hamburg">
           <img src="../image/hamburger.svg" alt="" />
         </div>
       </div>
@@ -316,10 +317,9 @@
             <img src="../image/whi.png" alt="" />
           </div>
           <br />
-          <p >
+          <p>
             Lorem ipsum, dolor sit amet consectetur <br />
             adipisicing elit. Perferendis id vero deleniti <br />
-          
           </p>
 
           <div class="media">
@@ -394,7 +394,15 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        alert(`${productName} has been added to your cart.`);
+
+        Swal.fire({
+          title: "Added to Cart!",
+          text: `${productName} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true, // Show a progress bar during the timer
+        });
 
         // Update cart count in the cart-icon
         updateCartCount();
@@ -416,15 +424,22 @@
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
         document.getElementById("cart-count").textContent = totalItem;
+
+        const cartCountElement = document.getElementById("cart-count"); // Select the cart count element
+        cartCountElement.textContent = totalItem; // Update the text content with total items
+
+        // Show or hide the badge based on totalItem
+        if (totalItem > 0) {
+          cartCountElement.style.display = "inline-block"; // Show badge if count > 0
+        } else {
+          cartCountElement.style.display = "none"; // Hide badge if count is 0
+        }
       };
       window.onload = updateCartCount;
 
       document.getElementById("hamburg")?.addEventListener("click", () => {
         document.getElementById("nav-menu")?.classList.toggle("active");
       });
-
-
-
     </script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>category</title>
     <link rel="stylesheet" href="./category.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -443,8 +444,16 @@
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert(`${productName} has been added to your cart.`);
 
+
+  Swal.fire({
+          title: "Added to Cart!",
+          text: `${productName} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true,
+        });
   // Update cart count in the cart-icon
   updateCartCount();
 };
@@ -466,6 +475,16 @@ const viewProductDetails = (name, price, imageUrl) => {
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
         document.getElementById("cart-count").textContent = totalItem;
+        
+       const cartCountElement = document.getElementById("cart-count"); // Select the cart count element
+    cartCountElement.textContent = totalItem; // Update the text content with total items
+
+    // Show or hide the badge based on totalItem
+    if (totalItem > 0) {
+        cartCountElement.style.display = "inline-block"; // Show badge if count > 0
+    } else {
+        cartCountElement.style.display = "none"; // Hide badge if count is 0
+    }
       };
       window.onload = updateCartCount;
 

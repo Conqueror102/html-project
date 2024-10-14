@@ -90,6 +90,7 @@ nav ul li a{
   height: 20px;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   font-size: 13px;
 }

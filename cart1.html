@@ -62,7 +62,7 @@
               <p>Shipping: Free</p>
               <hr>
               <p>Total: <span id="total">₦0</span></p>
-              <button id="checkout" class="checkout-btn">CHECKOUT</button>
+              <button id="checkout-btn" class="checkout-btn">Checkout</button>
             </div>
           </div>
         </div>
@@ -169,6 +169,17 @@
         const cart = JSON.parse(localStorage.getItem("cart")) || [];
         const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
         document.getElementById("cart-count").textContent = totalItem;
+
+        
+       const cartCountElement = document.getElementById("cart-count"); // Select the cart count element
+    cartCountElement.textContent = totalItem; // Update the text content with total items
+
+    // Show or hide the badge based on totalItem
+    if (totalItem > 0) {
+        cartCountElement.style.display = "inline-block"; // Show badge if count > 0
+    } else {
+        cartCountElement.style.display = "none"; // Hide badge if count is 0
+    }
       };
 
       window.onload = updateCartCount;
@@ -178,6 +189,14 @@
       document.getElementById("hamburg")?.addEventListener("click", () =>{
         document.getElementById("nav-menu")?.classList.toggle("active");
       })
+// Add event listener for checkout button
+// Add event listener for checkout button
+document.getElementById("checkout-btn").addEventListener("click", function() {
+    // Redirect to the correct checkout page inside the 'checkout' folder
+    window.location.href = "checkout/checkout.html"; // Adjust path based on your folder structure
+});
+
+
     </script>
 
   </body>
