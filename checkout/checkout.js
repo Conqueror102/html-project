@@ -14,9 +14,9 @@ function displayOrderSummary() {
 
         row.innerHTML = `
             <td>${item.name}</td>
-            <td>$${item.price.toFixed(2)}</td>
+            <td>₦${item.price.toFixed(2)}</td>
             <td>${item.quantity}</td>
-            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td>₦${(item.price * item.quantity).toFixed(2)}</td>
         `;
 
         checkoutTableBody.appendChild(row);
@@ -26,8 +26,8 @@ function displayOrderSummary() {
     });
 
     // Display the subtotal and total
-    document.getElementById("subtotal").innerText = `$${subtotal.toFixed(2)}`;
-    document.getElementById("total").innerText = `$${subtotal.toFixed(2)}`;
+    document.getElementById("subtotal").innerText = `₦${subtotal.toFixed(2)}`;
+    document.getElementById("total").innerText = `₦${subtotal.toFixed(2)}`;
 }
 
 // Call the function to display the cart items on page load
