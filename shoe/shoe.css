@@ -302,13 +302,15 @@ justify-content: center;
   /* box-shadow: black 2px 4px 7px -1px; */
 }
 
+
 footer {
   padding: 50px 10px;
-  background-color: #121313;
+  background-color: #000000;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   margin-top: 65px;
+  width: 100%;
 }
 
 .footerchild {
