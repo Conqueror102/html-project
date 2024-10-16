@@ -454,6 +454,10 @@ footer {
   margin-top: 65px;
 }
 
+a {
+  color: white;
+}
+
 .footerchild {
   width: 80%;
   /* height: 250px; */
